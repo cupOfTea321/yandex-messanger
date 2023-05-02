@@ -2,12 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>My First Parcel App</title>
+    <title>My First dddParcel App</title>
 
     <link rel="stylesheet" href="styles/styles.pcss" />
-<!--    <script type="module" src="app.js"></script>-->
+         <script type="module" src="app.js"></script>
 </head>
 <body>
-    {{> app }}
+<!--    {{> app }}-->
+    <div class="chat">
+        <div class="chats_block">
+            <a href="#">Профиль ></a>
+            <input class="search_input" type="text" placeholder="Поиск" >
+
+            <div class="chats" id="chats">
+
+
+            </div>
+        </div>
+        <div class="chat_about">
+            <div class="user_about">
+                <img  src="assets/Ellipse%2019.png" alt="avatar">
+                <p class="user_name">Вадим</p>
+            </div>
+
+            <hr>
+            <i class="fa-duotone fa-circle-ellipsis-vertical" style="--fa-primary-color: #3369f3; --fa-secondary-color: #f5f5f5;"></i>
+        </div>
+    </div>
 </body>
 </html>
