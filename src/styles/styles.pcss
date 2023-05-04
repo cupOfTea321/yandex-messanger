@@ -5,22 +5,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-
 }
 body{
     height: 100vh;
 }
-
+.user__name{
+    font-weight: bold;
+}
 
 .chat{
     display: flex;
 
 }
-.chats{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.chats_block{
+.chat-search{
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -28,9 +25,35 @@ body{
     height: 100vh;
     padding-left: 20px;
     padding-right: 20px;
-}
 
-.chats_block a{
+    &__dialogs{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    &__input {
+        background-image: url('../assets/search_icon.png');
+        padding-left: 65px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 32px;
+        border-radius: 5px;
+        margin: 0 auto;
+        &:focus{
+            background-image: none;
+            padding-left: 10px;
+        }
+        &::placeholder{
+            text-align: center;
+        }
+        &:focus::placeholder{
+            color: white;
+            text-align: left;
+        }
+    }
+
+}
+.chat-search a{
     font-size: 16px;
     /* identical to box height, or 100% */
 
@@ -39,67 +62,122 @@ body{
     margin-top: 20px;
     color: #999999;
 }
-.search_input {
-    background-image: url('../assets/search_icon.png');
-    padding-left: 65px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 32px;
-    border-radius: 5px;
+/*
+    DIALOGS MAP
+*/
 
-    margin: 0 auto;
-}
-input::placeholder{
-    text-align: center;
-}
-input:focus::placeholder{
-    color: white;
-    text-align: left;
-}
-.search_input:focus{
-    background-image: none;
-    padding-left: 10px;
-}
-.user_chats_ava{
-    width: 47px;
-    height: 47px;
-    margin-right: 10px;
-}
-.user_name{
-    font-weight: bold;
-}
-.chats_item{
+.dialogs-item{
     display: flex;
     margin-top: 12px;
     justify-content: space-between;
-}
-.chats_item_left{
-    display: flex;
-}
-.chat_new{
-    background: #3369F3;
+    &__ava{
+        width: 47px;
+        height: 47px;
+        margin-right: 10px;
+    }
+    &__left{
+        display: flex;
+    }
+    &__new{
+        background: #3369F3;
 
-    width: 20px;
-    height: 20px;
-    color: white;
-    text-align: center;
-    border-radius: 50%;
-    float: right;
+        width: 20px;
+        height: 20px;
+        color: white;
+        text-align: center;
+        border-radius: 50%;
+        float: right;
+    }
 }
-
-.chat_about{
+/*
+    CHAT MAIN
+*/
+.chat-main{
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 10px;
+    &__user{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    &__user > div{
+        display: flex;
+        align-items: center;
+    }
+    &__user > div > *{
+        margin-right: 10px;
+    }
+    &__img{
+        height: 15px;
+        width: 3px;
+    }
+    &__time{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        color: #999999;
+        margin-bottom: 50px;
+    }
+}
+
+
+/*
+    MESSAGES BLOCK
+*/
+.chat-messages{
+    width: 40%;
+    &__text{
+        background-color: #F8F8F8;
+        border-radius: 10px;
+        padding: 11px;
+        margin-bottom: 20px;
+    }
+    &__time{
+        font-size: 12px;
+        color: #999999;
+        float: right;
+        margin-top: -11px;
+    }
+    &__text-photo{
+        font-size: 12px;
+        color: white;
+        border-radius: 30px;
+        padding: 0 5px;
+        float: right;
+        background-color: rgba(82, 82, 82, 0.5);
+        margin-top: -25px;
+        position: relative;
+    }
+    &__photo{
+        width: 78%;
+    }
+}
+
+.camera{
+    width: 80%;
 
 }
-.user_about{
+.chat-my{
+    background: #E4EDFD;
+    padding: 11px;
+    float: right;
+    border-radius: 30px;
     display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+    align-items: baseline;
+    margin-top: 30px;
+    &__text{
+        padding-right: 20px;
+    }
+    img{
+        height: 4px;
+        width: 10px;
+    }
+    &__time{
+        font-size: 12px;
+        color: #3369F3;
+    }
 }
-.user_about > *{
-    margin-right: 10px;
-}
+
