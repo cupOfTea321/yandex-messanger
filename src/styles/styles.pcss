@@ -1,4 +1,6 @@
-
+@import "./variables.pcss";
+@import "../partials/profile/profileStyles.pcss";
+@import "../partials/auth/authStyles.pcss";
 
 *{
     margin: 0;
@@ -6,15 +8,28 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+
+
 body{
-    height: 100vh;
+
+}
+.bold{
+    font-weight: bold;
+}
+.second{
+    color: var(--second-text);
 }
 .user__name{
     font-weight: bold;
 }
+.user__message{
+    color: var(--second-text);
+}
 
 .chat{
     display: flex;
+    height: 100vh;
+    position: relative;
 
 }
 .chat-search{
@@ -60,7 +75,7 @@ body{
     text-align: right;
     margin-bottom: 20px;
     margin-top: 20px;
-    color: #999999;
+    color: var(--second-text);
 }
 /*
     DIALOGS MAP
@@ -68,20 +83,34 @@ body{
 
 .dialogs-item{
     display: flex;
+    align-items: center;
     margin-top: 12px;
+    font-size: 13px;
     justify-content: space-between;
     &__ava{
         width: 47px;
         height: 47px;
         margin-right: 10px;
+        margin-top: 12px;
+        margin-bottom: 12px;
     }
     &__left{
         display: flex;
+        align-items: center;
+        div{
+
+            width: 60%;
+            font-size: 12px;
+        }
+    }
+    &__time{
+        color: var(--second-text);
     }
     &__new{
-        background: #3369F3;
+        background: var(--new);;
 
         width: 20px;
+        padding: 2px;
         height: 20px;
         color: white;
         text-align: center;
@@ -93,10 +122,12 @@ body{
     CHAT MAIN
 */
 .chat-main{
+    position: relative;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 10px;
+
     &__user{
         display: flex;
         align-items: center;
@@ -122,8 +153,6 @@ body{
         margin-bottom: 50px;
     }
 }
-
-
 /*
     MESSAGES BLOCK
 */
@@ -177,7 +206,30 @@ body{
     }
     &__time{
         font-size: 12px;
-        color: #3369F3;
+        color: var(--new);
     }
 }
 
+.chat-footer{
+    position: absolute;
+    bottom: 11px;
+    left: 20px;
+    right: 20px;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 11px;
+    }
+    &__hr{
+        width: 100%;
+        margin-top: 100px;
+    }
+    input{
+        width: 90%;
+        background: #EFEFEF;
+        border-radius: 30px;
+        padding: 10px 20px;
+        border: none;
+    }
+}
