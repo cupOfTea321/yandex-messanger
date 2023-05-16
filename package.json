@@ -5,8 +5,7 @@
   "scripts": {
     "parcelStart": "parcel --no-cache src/index.hbs",
     "parcelBuild": "parcel build",
-    "build": "parcel build && node server.js",
-    "start": "parcel build src/index.hbs && node ./server.js"
+    "start": "parcel build ./src/index.hbs && node server.js --no-cache"
   },
   "repository": {
     "type": "git",

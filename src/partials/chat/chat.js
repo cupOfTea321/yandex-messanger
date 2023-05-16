@@ -1,5 +1,5 @@
 
-import ava from './assets/Ellipse 19.png'
+
 const items = [
     {name: 'Андрей', you: false, message: 'Изображение', time: '10:49', newMessage: 2},
     {name: 'Киноклуб', you: true, message: 'стикер', time: '10:49', newMessage: false},
@@ -39,7 +39,7 @@ const componentItems = items.map(item => {
     <hr>
                 <div class="dialogs-item">
                     <div class="dialogs-item__left">
-                        <img class="dialogs-item__ava" src="${ava}" alt="photo">
+                        <img class="dialogs-item__ava" src="./assets/Ellipse.png" alt="photo">
                         <div>
                             <p class="bold">${item.name}</p>
                             ${item.you ? `<p class="second">Вы: ${item.message}</p>` : `<p class="user__message">${item.message}</p>`}
@@ -50,7 +50,7 @@ const componentItems = items.map(item => {
                     <div>
                         <p class="dialogs-item__time">${item.time}</p>
                         ${item.newMessage ? `<p class="dialogs-item__new">${item.newMessage}</p>` : `<p></p>`}
-                        
+
                     </div>
                 </div>
     `;
