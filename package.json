@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "parcelStart": "parcel --no-cache src/index.hbs",
-    "build": "npx -p parcel-bundler parcel build ./src/index.hbs",
+    "build": "parcel build ./src/index.hbs",
     "start": "parcel build ./src/index.hbs && node server.js --no-cache"
   },
   "repository": {
